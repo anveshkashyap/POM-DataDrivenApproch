@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="scripts.TestValidLoginAsAdmin">
+        <methods>
+          <include name="openTheBrowser"/>
+          <include name="testValidLogin"/>
+          <include name="closeTheBrowser"/>
+          <include name="initializeBrowsers"/>
+        </methods>
+      </class> <!-- scripts.TestValidLoginAsAdmin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
