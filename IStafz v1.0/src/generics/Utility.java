@@ -6,20 +6,16 @@ import java.io.IOException;
 import java.util.Date;
 import java.util.Properties;
 
-import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 
 import com.google.common.io.Files;
 
 public class Utility extends BaseTest {
 	
 	public static FileInputStream file;
-	public static Workbook wb;
 
-	public static String getProperty(String CONFIG_PATH, String key) {
+	public static String getProperty(String key) {
 		String property = "";
 		Properties p = new Properties();
 		try {
@@ -31,43 +27,30 @@ public class Utility extends BaseTest {
 		property = p.getProperty(key);
 		return property;
 	}
-
-	public static String getCellValue(String excelPath, String sheet, int r, int c) {
-		String cellData = "";
-		try {
-		file = new FileInputStream(excelPath);
-		wb = WorkbookFactory.create(file);
-		}catch(IOException e) {
-			e.printStackTrace();
-		}
-		cellData = wb.getSheet(sheet).getRow(r).getCell(c).toString();
-		return cellData;
-	}
 	
-	public static int getRowCount(String excelPath, String sheet) {
-		int rowCount;
-		try {
-		file = new FileInputStream(excelPath);
-		wb = WorkbookFactory.create(file);
-		}catch(IOException e) {
-			e.printStackTrace();
-		}
-		rowCount = wb.getSheet(sheet).getLastRowNum();
-		return rowCount;
-	}
-	
-	public static void captureScreenshot(WebDriver driver, String testCaseName) {
+	public static void captureScreenshot(String testCaseName) throws IOException {
 		Date d = new Date();
-		String currentDate = d.toString().replace(":", "_");
+		String currentDate = d.toString().replace(':', '_').replace(' ', '_');
+		String currentDir = System.getProperty("user.dir");
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File src = ts.getScreenshotAs(OutputType.FILE);
-		File dest = new File(".//sceenshots/"+testCaseName+"_"+currentDate+".png");
-		try {
-			Files.copy(src, dest);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		Files.copy(src, new File(currentDir+"/screenshots/"+testCaseName+"_"+currentDate+".png"));
+		
+	}
+	
+	public static Object[][] getDataFromSheet(String sheet) {
+		Xls_Reader reader = new Xls_Reader(EXCEL_PATH);
+		Object[][] data = new Object[reader.getRowCount(sheet)-1][reader.getColumnCount(sheet)];
+		
+		for (int i = 0; i < reader.getRowCount(sheet)-1; i++) {
+			for (int k = 0; k < reader.getColumnCount(sheet); k++) {
+				data[i][k] = reader.getCellData(sheet, k, i+2).toString();
+				// System.out.println(data[i][k]);
+			}
 		}
+		return data;
+		
+		
 		
 	}
 	

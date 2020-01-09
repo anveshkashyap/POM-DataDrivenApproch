@@ -36,14 +36,14 @@ public class actiTIMELogin {
 		loginBtn.click();
 	}
 	
-	public void loginAsAdmin(String UN, String PW) {
+	public void loginIntoActiTIME(String UN, String PW) {
 		unTextBox.sendKeys(UN);
 		pwTextBox.sendKeys(PW);
 		loginBtn.click();
 	}
 	
-	public void verifyErrorMessage() {
-		Assert.assertTrue(errorMsg.isDisplayed());
+	public boolean verifyErrorMessage() {
+		return errorMsg.isDisplayed();
 	}
 
 }

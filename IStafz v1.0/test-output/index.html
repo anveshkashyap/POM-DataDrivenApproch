@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>C:\Users\Ajay\workspace\IStafz v1.0\testng.xml</span>
+                    <span>C:\Users\Ajay\git\repository\IStafz v1.0\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -102,7 +102,22 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="scripts.TestValidLoginAsAdmin" hash-for-method="testValidLogin">testValidLogin</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="scripts.LoginPageTest" hash-for-method="testInvalidLogin(admin, manager1)">testInvalidLogin(admin, manager1)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="scripts.LoginPageTest" hash-for-method="testInvalidLogin(abcd123, 123abc)">testInvalidLogin(abcd123, 123abc)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="scripts.LoginPageTest" hash-for-method="testInvalidLogin(admin1, manager)">testInvalidLogin(admin1, manager)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="scripts.LoginPageTest" hash-for-method="testValidLogin(admin, manager)">testValidLogin(admin, manager)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -120,14 +135,39 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">scripts.TestValidLoginAsAdmin</span>
+              <span class="class-name">scripts.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testValidLogin">
-                  </a> <!-- testValidLogin -->
+                  <a name="testInvalidLogin(admin, manager1)">
+                  </a> <!-- testInvalidLogin(admin, manager1) -->
+                  <span class="method-name">testInvalidLogin</span>
+                  <span class="parameters">(admin, manager1)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInvalidLogin(abcd123, 123abc)">
+                  </a> <!-- testInvalidLogin(abcd123, 123abc) -->
+                  <span class="method-name">testInvalidLogin</span>
+                  <span class="parameters">(abcd123, 123abc)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInvalidLogin(admin1, manager)">
+                  </a> <!-- testInvalidLogin(admin1, manager) -->
+                  <span class="method-name">testInvalidLogin</span>
+                  <span class="parameters">(admin1, manager)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidLogin(admin, manager)">
+                  </a> <!-- testValidLogin(admin, manager) -->
                   <span class="method-name">testValidLogin</span>
+                  <span class="parameters">(admin, manager)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -135,7 +175,7 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Ajay\workspace\IStafz v1.0\testng.xml</span>
+            <span class="header-content">C:\Users\Ajay\git\repository\IStafz v1.0\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,8 +183,9 @@
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;scripts.TestValidLoginAsAdmin&quot;/&gt;
+      &lt;class name=&quot;scripts.LoginPageTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -184,16 +225,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testValidLogin')
-data.setCell(0, 2, 'scripts.TestValidLoginAsAdmin')
-data.setCell(0, 3, 1170);
+data.setCell(0, 1, 'testInvalidLogin')
+data.setCell(0, 2, 'scripts.LoginPageTest')
+data.setCell(0, 3, 3422);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testInvalidLogin')
+data.setCell(1, 2, 'scripts.LoginPageTest')
+data.setCell(1, 3, 2782);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testInvalidLogin')
+data.setCell(2, 2, 'scripts.LoginPageTest')
+data.setCell(2, 3, 2346);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testValidLogin')
+data.setCell(3, 2, 'scripts.LoginPageTest')
+data.setCell(3, 3, 463);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -219,22 +272,58 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">scripts.TestValidLoginAsAdmin</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">scripts.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">initializeBrowsers</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
-                <span class="method-name">openTheBrowser</span>
-                <span class="method-start">60 ms</span>
+                <span class="method-name">openTheBrowser(chrome)</span>
+                <span class="method-start">733 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testValidLogin</span>
-                <span class="method-start">15063 ms</span>
+                <span class="method-name">testValidLogin(admin, manager)</span>
+                <span class="method-start">15586 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeTheBrowser</span>
-                <span class="method-start">16237 ms</span>
+                <span class="method-name">closeTheBrowser([TestResult name=testValidLogin status=SUCCESS method=LoginPageTest.testValidLogin(java.lang.String,...)</span>
+                <span class="method-start">16054 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">openTheBrowser(chrome)</span>
+                <span class="method-start">18518 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testInvalidLogin(admin, manager1)</span>
+                <span class="method-start">29765 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeTheBrowser([TestResult name=testInvalidLogin status=SUCCESS method=LoginPageTest.testInvalidLogin(java.lang.Str...)</span>
+                <span class="method-start">33190 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">openTheBrowser(chrome)</span>
+                <span class="method-start">33342 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testInvalidLogin(admin1, manager)</span>
+                <span class="method-start">48926 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeTheBrowser([TestResult name=testInvalidLogin status=SUCCESS method=LoginPageTest.testInvalidLogin(java.lang.Str...)</span>
+                <span class="method-start">51710 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">openTheBrowser(chrome)</span>
+                <span class="method-start">51896 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testInvalidLogin(abcd123, 123abc)</span>
+                <span class="method-start">64531 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeTheBrowser([TestResult name=testInvalidLogin status=SUCCESS method=LoginPageTest.testInvalidLogin(java.lang.Str...)</span>
+                <span class="method-start">66879 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -2,15 +2,16 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="scripts.TestValidLoginAsAdmin">
+      <class name="scripts.LoginPageTest">
         <methods>
-          <include name="openTheBrowser"/>
           <include name="testValidLogin"/>
+          <include name="openTheBrowser"/>
           <include name="closeTheBrowser"/>
           <include name="initializeBrowsers"/>
         </methods>
-      </class> <!-- scripts.TestValidLoginAsAdmin -->
+      </class> <!-- scripts.LoginPageTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
