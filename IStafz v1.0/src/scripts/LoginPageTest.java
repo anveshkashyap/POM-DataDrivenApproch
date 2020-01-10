@@ -1,5 +1,6 @@
 package scripts;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -9,6 +10,7 @@ import generics.Utility;
 import pompages.actiTIMELogin;
 
 public class LoginPageTest extends BaseTest{
+	Logger log = Logger.getLogger("LoginPageTest");
 	
 	@DataProvider
 	public Object[][] getDataFromValidLogin() {
@@ -20,8 +22,11 @@ public class LoginPageTest extends BaseTest{
 	public void testValidLogin(String UN,String PW) {
 		actiTIMELogin lp = new actiTIMELogin(driver);
 		lp.setUsername(UN); //Entering the Username.
+		log.info("Username entered into username text field.");
 		lp.setPassword(PW); //Entering the Password.
+		log.info("Password entered into password text field.");
 		lp.clickOnLogin(); //Clicking on Login Button.
+		log.info("Clicked on Login button.");
 		
 	}
 	
@@ -35,6 +40,7 @@ public class LoginPageTest extends BaseTest{
 	public void testInvalidLogin(String UN, String PW) {
 		actiTIMELogin lp = new actiTIMELogin(driver);
 		lp.loginIntoActiTIME(UN, PW);
+		log.info("Trying to login ith Invalid username and password.");
 		Assert.assertTrue(lp.verifyErrorMessage());
 	}
 

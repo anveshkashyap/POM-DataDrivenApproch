@@ -1,0 +1,16 @@
+06:01:33,969  INFO LoginPageTest<strong>{1}</strong>:25 - Username entered into username text field.
+06:01:34,065  INFO LoginPageTest<strong>{1}</strong>:27 - Password entered into password text field.
+06:01:34,143  INFO LoginPageTest<strong>{1}</strong>:29 - Clicked on Login button.
+06:01:50,666  INFO LoginPageTest<strong>{1}</strong>:43 - Trying to login ith Invalid username and password.
+06:02:08,288  INFO LoginPageTest<strong>{1}</strong>:43 - Trying to login ith Invalid username and password.
+06:02:23,206  INFO LoginPageTest<strong>{1}</strong>:43 - Trying to login ith Invalid username and password.
+06:02:27,600 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+06:02:27,601 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+06:02:27,602 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+06:02:27,603 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+06:02:27,603 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Ajay/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+06:02:28,149 DEBUG freemarker.cache<strong>{1}</strong>:45 - Couldn't find template in cache for "Extent.ftl"("en_IN", UTF-8, parsed); will try to load it.
+06:02:28,150 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en_IN.ftl"): Not found
+06:02:28,150 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+06:02:28,150 DEBUG freemarker.cache<strong>{1}</strong>:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+06:02:28,150 DEBUG freemarker.cache<strong>{1}</strong>:45 - Loading template for "Extent.ftl"("en_IN", UTF-8, parsed) from "jar:file:/C:/Users/Ajay/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
